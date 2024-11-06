@@ -1,0 +1,15 @@
+Create item list;
+Create prices list;
+Input balance;
+Check all available items and Create a list of indexes for those items:
+{
+for i in range(len(ItemList)):
+if can buy item - add index to list of available items
+}
+
+While balane > cheapest item
+{
+Output available items to buy/error;
+Input item choice;
+}
+Output 0 balance;
