@@ -22,12 +22,12 @@ else:
                 BuyableItems.append(i)
         print("Galite įsigyti:")
         for i in range(len(BuyableItems)):
-            print(f"{i + 1}.", ItemList[i], "-", f"€{PriceList[i]}")
+            print(f"{i + 1}.", ItemList[BuyableItems[i]], "-", f"€{PriceList[BuyableItems[i]]}")
         Choice = int(input("Įveskite pasirinkimo numerį:")) - 1
         if Choice >= len(BuyableItems):
             print("Nėra tokio pasirinkimo")
         else:
-            print(f"Pasirinkote {ItemList[Choice]}.")
-            Balance = round(Balance - PriceList[Choice], 2)
+            print(f"Pasirinkote {ItemList[BuyableItems[Choice]]}.")
+            Balance = round(Balance - PriceList[BuyableItems[Choice]], 2)
         print("Likutis:", Balance)
     print(f"Dėkojame už Jūsų pirkinį. Jūsų likutis yra €{Balance}")
