@@ -28,7 +28,7 @@ else:
             print("Nėra tokio pasirinkimo")
         else:
             print("Pasirinkote", ItemList[Choice])
-        Balance -= PriceList[Choice]
+        Balance = round(Balance - PriceList[Choice], 2)
         print("Likutis:", Balance)
     print("Dėkojame už Jūsų pirkinį. Jūsų likutis yra", Balance)
 
