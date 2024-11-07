@@ -11,7 +11,7 @@ PriceList = [
     float(0.75)
 ]
 MinPrice = float(min(PriceList))
-Balance = float(input("Įveskite sumą, kurią norite išleisti:"))
+Balance = float(input("Įveskite sumą, kurią norite išleisti: €"))
 if Balance < MinPrice:
     print("Jūsų įvestos sumos nepakanka jokiems daiktams įsigyti")
 else:
@@ -22,15 +22,12 @@ else:
                 BuyableItems.append(i)
         print("Galite įsigyti:")
         for i in range(len(BuyableItems)):
-            print(i + 1, ItemList[i], "-", PriceList[i])
+            print(f"{i + 1}.", ItemList[i], "-", f"€{PriceList[i]}")
         Choice = int(input("Įveskite pasirinkimo numerį:")) - 1
         if Choice >= len(BuyableItems):
             print("Nėra tokio pasirinkimo")
         else:
-            print("Pasirinkote", ItemList[Choice])
+            print(f"Pasirinkote {ItemList[Choice]}.")
         Balance = round(Balance - PriceList[Choice], 2)
         print("Likutis:", Balance)
-    print("Dėkojame už Jūsų pirkinį. Jūsų likutis yra", Balance)
-
-
-
+    print(f"Dėkojame už Jūsų pirkinį. Jūsų likutis yra €{Balance}")
